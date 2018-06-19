@@ -1,7 +1,7 @@
-version: "2"
+version: "3"
 services:
   wordpress:
-    image: wordpress:latest
+    image: wordpress:4.9
     container_name: "wordpress-dev"
     volumes:
       - "$PWD:/var/www/html"
@@ -16,7 +16,7 @@ services:
     env_file: .env
 
   db:
-    image: mysql:latest
+    image: mysql:5.7
     container_name: "wordpress-db-dev"
     volumes:
       - "db-data:/var/lib/mysql"
